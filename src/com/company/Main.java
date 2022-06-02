@@ -10,6 +10,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        //scanner component used as baseline for the logic when incorporating it into GUI.
+        //The scanner is present to go through the algorithmic function of the application quickly if one does not want to use the GUI.
         System.out.println("Would you like to split the bill evenly or have an individualized bill? (equal / not equal)");
         String equalReponse = sc.nextLine();
         if (Objects.equals(equalReponse, "equal")) {
