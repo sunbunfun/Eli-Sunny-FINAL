@@ -52,18 +52,22 @@ public class IndividualSplit {
                         Double[] values = new Double[peopleNumber];
 
                         for (int i = 0; i < values.length; i++) {
-                            values[i] = Double.parseDouble(JOptionPane.showInputDialog("Person " + (i + 1) + " spent: "));
+                            values[i] = Double.parseDouble(JOptionPane.showInputDialog(null, "Person " + (i + 1) + " spent: ", null, JOptionPane.PLAIN_MESSAGE));
                         }
 
                         double sum = 0;
                         for (int i = 0; i < values.length; i++) {
                             sum += values[i];
                         }
-                        JOptionPane.showMessageDialog(null, "Your total bill comes out to: $" + sum, "Each Individual Cost", JOptionPane.INFORMATION_MESSAGE);
-
+                        JOptionPane.showMessageDialog(null, "Your bill comes out to: $" + sum, "Each Individual Cost", JOptionPane.PLAIN_MESSAGE);
+                        double tipPercent = Double.parseDouble(JOptionPane.showInputDialog(null, "How much would you like to tip? (Generally 15-20%)", null, JOptionPane.PLAIN_MESSAGE));
+                        double tipPercentToDecimal = tipPercent / 100.0;
+                        double tipAmount = tipPercentToDecimal * sum;
+                        double totalCostTipAmount = tipAmount + sum;
+                        JOptionPane.showMessageDialog(null, "Your final bill comes out to: $" + totalCostTipAmount, "Each Individual Cost", JOptionPane.PLAIN_MESSAGE);
                     }
                 } catch (Exception E) {
-                    JOptionPane.showMessageDialog(f.getComponent(0), "Please enter valid numbers in the fields provided.", "Error", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(f.getComponent(0), "Please enter valid numbers in the fields provided.", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
