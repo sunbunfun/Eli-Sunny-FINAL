@@ -9,6 +9,7 @@ public class BillSplit extends JFrame {
         frame();
     }
 
+    //Page asking for equal split or individual coverage options for users to choose from
     public void frame() {
         JFrame f = new JFrame("Bill Calculator");
 
@@ -22,7 +23,7 @@ public class BillSplit extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == homeButton) {
+                if (e.getSource() == homeButton) { //when this button is pressed, it will route to the home page
                     f.dispose();
                     Home home = new Home();
                 }

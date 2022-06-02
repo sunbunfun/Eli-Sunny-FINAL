@@ -65,7 +65,7 @@ public class EvenSplit {
                     double totalCost = Double.parseDouble(strTotalCost);
                     String strTipField = tipPercentageField.getText();
                     double tipPercent = Double.parseDouble(strTipField);
-                    double tipPercentToDecimal = tipPercent / 100.0;
+                    double tipPercentToDecimal = tipPercent / 100.0; //converts it to decimal
                     double tipAmount = tipPercentToDecimal * totalCost;
                     double totalCostTipAmount = tipAmount + totalCost;
                     String strNumberOfPeople = numberPeopleField.getText();
@@ -73,6 +73,7 @@ public class EvenSplit {
                     double eachPersonPays = Math.round((totalCostTipAmount / numberOfPeople) * 100.0) / 100.0; //rounds to nearest hundredth
 
                     JOptionPane.showMessageDialog(f.getComponent(0), "Each Person Pays: $ " + eachPersonPays, "Individual Cost", JOptionPane.INFORMATION_MESSAGE);
+                    //prompts dialogue boxes that display the total cost for users
                 } catch (Exception E){
                     JOptionPane.showMessageDialog(f.getComponent(0), "Please enter valid numbers in the fields provided.", "Error", JOptionPane.INFORMATION_MESSAGE);
                 }

@@ -53,6 +53,7 @@ public class IndividualSplit {
 
                         for (int i = 0; i < values.length; i++) {
                             values[i] = Double.parseDouble(JOptionPane.showInputDialog(null, "Person " + (i + 1) + " spent: ", null, JOptionPane.PLAIN_MESSAGE));
+                        //prompts users through a for loop to input the money each person is paying
                         }
 
                         double sum = 0;

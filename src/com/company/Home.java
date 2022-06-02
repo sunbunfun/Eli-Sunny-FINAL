@@ -10,6 +10,7 @@ public class Home extends JFrame {
         frame();
     }
 
+    //Home Screen
     public void frame() {
 
         JFrame f = new JFrame("Bill Splitter");
@@ -96,6 +97,7 @@ public class Home extends JFrame {
             }
         });
 
+        //adds components to the panel
         p.setLayout(null);
         p.add(b1);
         p.add(b2);
@@ -105,6 +107,7 @@ public class Home extends JFrame {
         p.add(gray);
         p.add(labelOne);
         p.add(backGroundColor);
+        //adds panel to the JFrame
         f.add(p);
     }
 }
