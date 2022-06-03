@@ -64,7 +64,7 @@ public class IndividualSplit {
                         double tipPercent = Double.parseDouble(JOptionPane.showInputDialog(null, "How much would you like to tip? (Generally 15-20%)", null, JOptionPane.PLAIN_MESSAGE));
                         double tipPercentToDecimal = tipPercent / 100.0;
                         double tipAmount = tipPercentToDecimal * sum;
-                        double totalCostTipAmount = tipAmount + sum;
+                        double totalCostTipAmount = Math.round((tipAmount + sum) * 100.0) / 100.0;
                         JOptionPane.showMessageDialog(null, "Your final bill comes out to: $" + totalCostTipAmount, "Each Individual Cost", JOptionPane.PLAIN_MESSAGE);
                     }
                 } catch (Exception E) {
